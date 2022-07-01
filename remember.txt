@@ -1,0 +1,2 @@
+unset prefix
+nvm use --delete-prefix v16.15.1

@@ -7,7 +7,7 @@ const Bloglist = (props) => {
   return (
     <aside>
       <ul className="menu">
-        <li className="text-primary h4 menu-item"> Senaste inläggen</li>
+        <li style={{background: "#ff5e57"}} className="text-light h5 menu-item"> Senaste inläggen</li>
         {list.map((l, i) => (
           <BlogListItem key={i} data={l}></BlogListItem>
         ))}

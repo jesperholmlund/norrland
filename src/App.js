@@ -14,16 +14,18 @@ function App() {
     content: "lorem ipsum",
   });
   const posts = [
-    { title: "Kalvträskskidan", content: "lorem ipsum" },
+    { title: "Kalvträskskidan", content: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum" },
     { title: "Lortsverige", content: "lorem lorem" },
     { title: "Drängsmark", content: "lorem lorem" },
   ];
   return (
     <div className="App">
       <Context.Provider value={[context, setContext]}>
-        <Nav></Nav>
         <main>
+          <div>
+        <Nav></Nav>
           <Bloglist data={posts}></Bloglist>
+          </div>
           <Blogpost></Blogpost>
         </main>
         <Search data={posts}></Search>

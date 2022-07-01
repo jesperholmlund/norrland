@@ -1,20 +1,26 @@
 import React from "react";
+import {FcSearch, FcFolder, FcHome, FcAbout, FcMenu, FcBusinessContact} from "react-icons/fc"
+
 
 const Nav = () => {
   return (
-    <header className=" bg-secondary">
-      <ul style={{ display: "flex" }} className="menu bg-secondary">
+    <header>
+      <ul className="menu">
+      <li style={{background: "#ff5e57"}} className="text-light h5 menu-item"> <FcMenu></FcMenu> Meny</li>
         <li className="menu-item">
-          <a>Hem</a>
+          <a><FcHome></FcHome> Startsidan</a>
         </li>
         <li className="menu-item">
-          <a className="text-primary">Arkiv</a>
+          <a><FcFolder></FcFolder> Arkiv</a>
         </li>
         <li className="menu-item">
-          <a>Om</a>
+          <a><FcSearch></FcSearch> Sök artiklar</a>
         </li>
         <li className="menu-item">
-          <a>Kontakt</a>
+          <a><FcAbout></FcAbout> Om hemsidan</a>
+        </li>
+        <li className="menu-item">
+          <a><FcBusinessContact></FcBusinessContact> Kontakta oss</a>
         </li>
       </ul>
     </header>

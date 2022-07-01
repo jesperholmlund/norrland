@@ -132,22 +132,30 @@ main {
   padding-top: 18px;
   display: flex !important;
   flex-direction: row;
+  justify-content: center;
+  row-gap: 18px;
 }
 
 aside {
-  width: 300px;
+  width: 220px;
+  margin-top: 19px;
 }
 
 article {
-  width: 600px;
+  width: 800px;
   border: none !important;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
 }
 
 .menu {
   box-shadow: none !important;
+  transform: none !important;
+  padding: none !important;
+}
+
+ul{
+  padding: 0 !important;
+}
+
+li{
+  padding: 7px !important;
 }

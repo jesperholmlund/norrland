@@ -3,12 +3,11 @@ import BlogListItem from "./BlogListItem";
 
 const Bloglist = (props) => {
   const [list, setList] = useState(props.data);
-
   return (
     <aside>
       <ul className="menu">
-        <li style={{background: "#ff5e57"}} className="text-light h5 menu-item"> Senaste inläggen</li>
-        {list.map((l, i) => (
+        <li className=" h5 menu-item"> Senaste inläggen</li>
+        {props.data.map((l, i) => (
           <BlogListItem key={i} data={l}></BlogListItem>
         ))}
       </ul>

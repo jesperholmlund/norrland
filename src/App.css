@@ -138,7 +138,6 @@ main {
 
 aside {
   width: 220px;
-  margin-top: 19px;
 }
 
 article {
@@ -158,4 +157,8 @@ ul{
 
 li{
   padding: 7px !important;
+}
+
+.card-header{
+  padding: 0 !important;
 }

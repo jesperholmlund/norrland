@@ -6,7 +6,8 @@ const Nav = () => {
   return (
     <header>
       <ul className="menu">
-      <li style={{background: "#ff5e57"}} className="text-light h5 menu-item"> <FcMenu></FcMenu> Meny</li>
+      <li className=" h5 menu-item"> <FcMenu></FcMenu> Meny</li>
+      <li><div class="divider text-center"></div></li>
         <li className="menu-item">
           <a><FcHome></FcHome> Startsidan</a>
         </li>
@@ -22,6 +23,7 @@ const Nav = () => {
         <li className="menu-item">
           <a><FcBusinessContact></FcBusinessContact> Kontakta oss</a>
         </li>
+        <li><div class="divider text-center"></div></li>
       </ul>
     </header>
   );

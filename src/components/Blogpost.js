@@ -5,8 +5,9 @@ import { FcComments } from "react-icons/fc";
 
 const Blogpost = () => {
   const [context, setContext] = useContext(Context);
+  console.log(context.tags)
   return (
-    <article className="card" style={{marginLeft: "18px", boxShadow: "11px 10px 2px 0px rgba(48, 55, 66, .3"}}>
+    <article className="card" style={{marginLeft: "18px"}}>
       <div className="card-header">
         <div className="card-title">
           {" "}
@@ -15,9 +16,11 @@ const Blogpost = () => {
         <div className="divider"></div>
       </div>
       <div className="card-body">
-        <h5>{context.content}</h5>
+        <div dangerouslySetInnerHTML={{ __html: context.html }}></div>
       </div>
-      <div className="card-footer">
+      <div className="card-footer">    
+      {context.tags === undefined ? <></> :<>{context.tags.map((t)=>(<span className="chip">{t.name}</span>))}</> }   
+      
         <div className="divider"><FcComments></FcComments> Comments</div>
       </div>
     </article>

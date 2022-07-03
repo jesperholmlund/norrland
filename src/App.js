@@ -8,6 +8,7 @@ import { Context } from "./components/Context";
 import Search from "./components/Search";
 import Nav from "./components/Nav";
 import axios from "axios"
+import About from "./components/About";
 
 function App() {
   const [context, setContext] = useState({
@@ -32,12 +33,11 @@ function App() {
       <Context.Provider value={[context, setContext]}>
         <main>
           <div>
-        <Nav></Nav>
+        <Nav data={blogPosts} value={(context, setContext)}></Nav>
           <Bloglist data={blogPosts}></Bloglist>
           </div>
           <Blogpost></Blogpost>
         </main>
-        <Search data={posts}></Search>
       </Context.Provider>
     </div>
   );

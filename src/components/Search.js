@@ -6,14 +6,16 @@ const Search = (props) => {
   const handleChange = (e) => {
     const query = e.target.value;
     const filteredArray = props.data.filter(
-      (f) => f.title.includes(query) || f.content.includes(query)
+      (f) => f.title.includes(query) || f.html.includes(query)
     );
     setSearchList(filteredArray);
   };
+  const [visibility, setVisibility] = useState(props.show)
   return (
-    <div className="modal" id="modal-id">
-      <div className="modal-container">
+    <div onclick={props.visibility} className={"modal modal-bg " + (props.show === true ? "active" : "notactive")} id="modal-id">
+      <div style={{minHeight: "600px"}} className="modal-container">
         <div className="modal-header">
+          <div className="modal-title h3">Sök artiklar</div>
           <div className="form-group">
             <input
               className="form-input"
@@ -25,7 +27,12 @@ const Search = (props) => {
         </div>
         <div className="modal-body">
           {searchList.map((s) => (
-            <p>{s.title}</p>
+            <div className="tile">
+              <div className="title-contet">
+                <p className="tile-title h5">{s.title}</p>
+                <p className="tile-subtitle text-gray">{s.excerpt}</p>
+            </div>
+            </div>
           ))}
         </div>
       </div>

@@ -18,10 +18,10 @@ const Blogpost = () => {
       <div className="card-body">
         <div dangerouslySetInnerHTML={{ __html: context.html }}></div>
       </div>
-      <div className="card-footer">    
-      {context.tags === undefined ? <></> :<>{context.tags.map((t)=>(<span className="chip">{t.name}</span>))}</> }   
-      
-        <div className="divider"><FcComments></FcComments> Comments</div>
+      <div className="card-footer">       
+        <div className="divider">
+        {context.tags === undefined ? <></> :<>{context.tags.map((t)=>(<span className="chip">{t.name}</span>))}</> }
+         <br></br> <FcComments></FcComments> Comments</div>
       </div>
     </article>
   );

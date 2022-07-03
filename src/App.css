@@ -143,6 +143,7 @@ aside {
 article {
   width: 800px;
   border: none !important;
+  height: fit-content;
 }
 
 .menu {
@@ -161,4 +162,8 @@ li{
 
 .card-header{
   padding: 0 !important;
+}
+
+.modal-bg{
+  background: #d2d2d294;
 }

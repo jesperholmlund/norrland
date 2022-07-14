@@ -5,7 +5,6 @@ import { FcComments } from "react-icons/fc";
 
 const Blogpost = () => {
   const [context, setContext] = useContext(Context);
-  console.log(context.tags)
   return (
     <article className="card" style={{marginLeft: "18px"}}>
       <div className="card-header">

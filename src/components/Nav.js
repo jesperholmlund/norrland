@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import {FcSearch, FcFolder, FcHome, FcAbout, FcMenu, FcBusinessContact} from "react-icons/fc"
 import Search from "./Search";
 import About from "./About";
+import Contact from "./Contact";
+import { Route, Routes } from "react-router-dom";
+import Archive from "./Archive";
 
 const Nav = (props) => {
   const [search, setSearch] = useState(false)
@@ -16,16 +19,12 @@ const Nav = (props) => {
         <li className="menu-item">
           <a><FcHome></FcHome> Startsidan</a>
         </li>
-        <li className="menu-item">
-          <a><FcFolder></FcFolder> Arkiv</a>
-        </li>
+        <Archive value={props.value}></Archive>
         <li className="menu-item">
           <a onClick={handleClick}><FcSearch></FcSearch> Sök artiklar</a>
         </li>
         <About value={props.value}></About>
-        <li className="menu-item">
-          <a><FcBusinessContact></FcBusinessContact> Kontakta oss</a>
-        </li>
+        <Contact value={props.value}></Contact>
         <li><div class="divider text-center"></div></li>
       </ul>
     </header>

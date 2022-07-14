@@ -20,7 +20,6 @@ function App() {
     axios({method: "get",
     url: "http://localhost:2368/ghost/api/content/posts/?key=f9b20154124d74a3a3bd3c5a5c&include=tags"}).then((res)=>{
       setBlogPosts(res.data.posts)
-      console.log(blogPosts)
     })
   },[])
   const posts = [
